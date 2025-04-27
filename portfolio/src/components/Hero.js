@@ -1,0 +1,39 @@
+import React from 'react'
+import Heroimg from '../assets/hero-img.png'
+
+const Hero = () => {
+  return (
+    <section className='bg-primary text-white py-32'>
+        <div className='container mx-auto grid md:grid-cols-2 items-center md: justify-between'>
+        
+        <div className='hero-info'>
+            <h1 className=' text-2xl lg:text-6xl'>   
+              Hi<br/> I am <span className='text-accent'>Geetanjali </span>Nishad<br/>
+              Frontend Developer
+            </h1>
+         
+    <p className='py-6 text-sm tracking-wider'> I am a detail-oriented frontend developer skilled in Javascript, React.js,API and Firebase, 
+    creating responsive web application.</p>
+    <button
+     onClick={() => {
+      const link = document.createElement('a');
+      link.href = '/path/to/your/resume.pdf';
+      link.download = 'Your_Resume_Name.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }}
+     className='btn bg-accent border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent'>
+      Resume
+      </button>
+    </div>
+
+        <div className='hero-img'>
+            <img src={Heroimg} alt="coding illustration" className='lgw-[80%] ml-auto' />
+        </div>
+    </div>
+    </section>
+  );
+}
+
+export default Hero

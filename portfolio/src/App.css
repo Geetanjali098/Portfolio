@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.projects-img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/*color*/
+.bg-primary{
+  background: #0F172A;
+}
+
+.bg-secondery{
+  background: #1E293B;
+}
+
+.bg-accent{
+  background: #7477FF;
+}
+
+.text-accent{
+ color: #7477FF;
+}
+
+nav li a{
+  @apply px-4 py-5 text-lg;
+}
+nav li a:hover{
+ color: #7477FF;
+}
+.mobile-nav{
+  @apply block md:hidden fixed  top-10 py-2 h-full w-full bg-gray-900 duration-500 ;
+}
+
+/*Hero*/
+h1{
+  font-family: 'Pacifico', cursive;
+  line-height: 1.5 !important;
+}
+
+p{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight-400;
+  font-style: normal;
+}
+
+.ul {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight-400;
+  font-style: normal;
+}
+
+/* For a subtle tilt effect on hover */
+.group-hover:hover .tilt-effect {
+  transform: scale(1.1) rotate(1deg);
+  transition: all 0.5s;
+}
+
+/* For a depth effect with box-shadow */
+.depth-effect {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(0) perspective(1000px);
+  transform-style: preserve-3d;
+}
+
+/* Add these styles to your existing App.css */
+
+/* Image Zoom Modal Styles */
+.image-zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.zoom-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.zoomed-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-close-btn {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.zoom-close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Add smooth transition for images */
+.projects-img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.projects-img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
