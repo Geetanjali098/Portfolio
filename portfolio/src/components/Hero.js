@@ -17,8 +17,10 @@ const Hero = () => {
     <button
      onClick={() => {
       const link = document.createElement('a');
-      link.href = '/path/to/your/resume.pdf';
-      link.download = 'Your_Resume_Name.pdf';
+      link.href = 'https://drive.google.com/file/d/1M98tjk4kmEo6jmNg1VzDaaW9Dp-nZ_dc/view?usp=sharing'; // Replace with the actual path to your resume file
+      link.target = '_blank'; // Open in a new tab
+      link.rel = 'noopener noreferrer'; // Security measure      
+      link.download = 'Geetanjali_Nishad_Resume.pdf'; // Name of the downloaded file
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

@@ -89,7 +89,7 @@ const Contact = () => {
           </a>
 
           <a 
-      href="mailto:geetanjalinishad0109@gmail.com"
+      href="mailto:geetanjalinishad0109@gmail.com ?subject=Let's Connect&body=Hi Geetanjali, I would like to discuss..."
       className='text-4xl hover:text-indigo-300 transition-colors flex items-center justify-center gap-2'
       aria-label="Send Email"
     >
